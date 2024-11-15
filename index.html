@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JG Computing | Bringing Forth Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/contact.css">
+    <link rel="stylesheet" href="Css/aboutus.css">
+    <link rel="stylesheet" href="Css/services.css">
+    <link rel="stylesheet" href="Css/Addons.css">
+    <link rel="stylesheet" href="Css/benefits.css">
+    <link rel="stylesheet" href="Css/digital.css">
+    <link rel="stylesheet" href="Css/Promo.css">
+    <link rel="stylesheet" href="Css/Footer.css">
+    <link rel="stylesheet" href="Css/flag-icon.css">
+    <link rel="stylesheet" href="Css/latest-product.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&family=Bebas+Neue&family=Changa+One:ital@0;1&family=Outfit:wght@100..900&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+</head>
+
+<body class="bg-gradient-to-r from-gray-900 to-black text-white">
+
+    <!-- Promotional Flyer Modal -->
+    <div id="promo-modal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden">
+        <div class="modal-content relative">
+            <button id="close-promo" class="absolute top-2 right-2 text-white bg-black bg-opacity-50 p-2 rounded-full">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="promo-container">
+                <div class="promo-image">
+                    <div class="promo-slide active">
+                        <img src="img/promo1.jpg" alt="Promotional Flyer 1">
+                    </div>
+                    <div class="promo-slide">
+                        <img src="img/promo2.jpg" alt="Promotional Flyer 2">
+                    </div>
+                    <div class="promo-slide">
+                        <img src="img/promo3.jpg" alt="Promotional Flyer 3">
+                    </div>
+                    <a href="path-to-learn-more" target="_blank" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="promo-description" id="content1">
+                    <h2 class="text-2xl font-bold mb-2">Unsubscribe? Are you sure?</h2>
+                    <p class="text-sm mb-4">You won't be able to receive any more updates about your treatment. Would you like to unsubscribe?</p>
+                    <div class="flex">
+                        <a href="path-to-unsubscribe" target="_blank" class="btn-gradient">Unsubscribe</a>
+                    </div>
+                </div>
+                <div class="promo-description hidden" id="content2">
+                    <h2 class="text-2xl font-bold mb-2">Special Offer Just For You!</h2>
+                    <p class="text-sm mb-4">Get an exclusive discount on our premium services. Don't miss out!</p>
+                    <div class="flex">
+                        <a href="path-to-offer" target="_blank" class="btn-gradient">Get Offer</a>
+                    </div>
+                </div>
+                <div class="promo-description hidden" id="content3">
+                    <h2 class="text-2xl font-bold mb-2">Join Our Newsletter</h2>
+                    <p class="text-sm mb-4">Stay updated with the latest news and exclusive offers. Subscribe now!</p>
+                    <div class="flex">
+                        <a href="path-to-subscribe" target="_blank" class="btn-gradient">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="w-32 h-16">
+                <img src="img/Logo_Cms@4x.png" alt="Logo">
+            </div>
+            <button id="menu-toggle" class="block lg:hidden ml-auto">
+                <i class="fas fa-bars text-xl text-white"></i>
+            </button>
+            <nav id="menu" class="hidden lg:flex ml-auto space-x-4 flex-col lg:flex-row items-center">
+                <a href="#" class="nav-item p-2" data-translate="home">Home</a>
+                <a href="#" class="nav-item hover:text-purple-600 p-2" data-translate="about">About</a>
+                <a href="#" class="nav-item hover:text-purple-600 p-2" data-translate="services">Services</a>
+                <a href="#" id="contact-link" class="nav-item hover:text-purple-600 p-2" data-translate="contact">Contact</a>
+                
+                <!-- Language Dropdown -->
+                <div class="relative">
+                    <button id="language-dropdown" class="flex items-center space-x-2 p-2 text-white">
+                        <i id="selected-flag" class="flag-icon flag-icon-us"></i>
+                    </button>
+                    <div id="dropdown-menu" class="absolute right-0 mt-2 bg-white border border-gray-300 shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 language-option" data-flag="us" data-lang="en">
+                            <i class="flag-icon flag-icon-us"></i> English
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 language-option" data-flag="fr" data-lang="fr">
+                            <i class="flag-icon flag-icon-fr"></i> Francais
+                        </a>
+                    </div>
+                </div>  
+            </div>       
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4 mt-4">
+            <button id="menu-close" class="block ml-auto">
+                <i class="fas fa-times text-xl text-white"></i>
+            </button>
+            <a href="#" class="nav-item" data-translate="home">Home</a>
+            <a href="#" class="nav-item hover:text-purple-600" data-translate="about">About</a>
+            <a href="#" class="nav-item hover:text-purple-600" data-translate="services">Services</a>
+            <a href="#" id="mobile-contact-link" class="nav-item hover:text-purple-600" data-translate="contact">Contact</a>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-6 py-8 main-content landing">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-16">
+            <div class="max-w-lg lg:w-1/2">
+                <p class="mb-2" data-translate="bringing_forth_solutions" style="color: #69b9ed;">Bringing Forth Solutions</p>
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-4" data-translate="we_are_here_to_achieve_your_success">
+                    We’re Here to <span style="color: #69b9ed;">Achieve your Success.</span>
+                </h1>
+                <p class="text-gray-600 mb-8" data-translate="to_resolve_this">
+                    To resolve this, you can try renaming the function to something more unique. Here's the updated.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="btn-gradient px-8 rounded" data-translate="learn_more">Learn More</a>
+                    <a href="#" class="btn flex items-center space-x-2 text-gray-300">
+                        <div class="play-button">
+                            <img src="img/Icon_play.png" alt="Play GIF">
+                        </div>
+                        <span data-translate="watch_video">Watch video</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block mt-0 lg:mt-8">
+                <img class="main-image" src="img/img1.png" alt="Person at computer">
+            </div>
+        </div>
+
+        <!-- Our Benefits Section -->
+        <div class="flex flex-col md:flex-row items-center mb-16">
+            <div class="relative w-full md:w-1/2 mb-8 md:mb-0 benefit-header">
+                <div class="absolute inset-0 flex items-center justify-left text-gray-700 text-7xl font-bold">
+                    Benefits
+                </div>
+                <img src="img/Ima.png" alt="Benefits Image" class="w-full h-auto relative z-10">
+            </div>
+            <div class="w-full md:w-1/2 p-8 bg-gray-800 rounded-lg shadow-none">
+                <div class="flex items-center mb-4">
+                    <div class="bg-purple-100 p-4 rounded mr-4">
+                        <img src="img/Bene.png" alt="Benefits Icon" class="w-12 h-12">
+                    </div>
+                    <div>
+                        <h1 class="text-4xl font-bold mb-0 text-white">Our Benefits</h1>
+                        <p class="text-gray-300">Why work with us?</p>
+                    </div>
+                </div>
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start benefit-item">
+                        <div class="custom-bullet mr-4">
+                            <i class="fas fa-check text-purple-500"></i>
+                        </div>
+                        <p class="text-gray-300">To resolve this, you can try renaming the function to something more unique. Here's the updated</p>
+                    </li>
+                    <li class="flex items-start benefit-item">
+                        <div class="custom-bullet mr-4">
+                            <i class="fas fa-check text-purple-500"></i>
+                        </div>
+                        <p class="text-gray-300">To resolve this, you can try renaming the function to something more unique. Here's the updated</p>
+                    </li>
+                    <li class="flex items-start benefit-item">
+                        <div class="custom-bullet mr-4">
+                            <i class="fas fa-check text-purple-500"></i>
+                        </div>
+                        <p class="text-gray-300">To resolve this, you can try renaming the function to something more unique. Here's the updated</p>
+                    </li>
+                    <li class="flex items-start benefit-item">
+                        <div class="custom-bullet mr-4">
+                            <i class="fas fa-check text-purple-500"></i>
+                        </div>
+                        <p class="text-gray-300">To resolve this, you can try renaming the function to something more unique. Here's the updated</p>
+                    </li>
+                </ul>
+                <button class="mt-8 btn-gradient px-6 py-3 rounded-lg shadow hover:bg-purple-600 transition duration-300">Contact us</button>
+            </div>
+        </div>
+
+
+
+<!-- Our Services Section -->
+<section id="our-services" class="py-16" style="background-image: url('img/bg_service.jpg'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-6">
+        <div class="relative mb-16">
+            <div class="absolute inset-0 flex items-center justify-end pr-8 hidden md:flex">
+                <span class="text-7xl font-bold text-gray-700">Our Services</span>
+            </div>
+            <div class="relative flex items-center mb-8">
+                <div class="bg-purple-100 p-4 rounded mr-4">
+                    <img src="img/Bag_exper.png" alt="Service Icon" class="w-10 h-10">
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold mb-0 text-white">Our Services</h1>
+                    <p class="text-gray-300">What we do.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+            <div class="service-card p-6 rounded-lg shadow-lg bg-gray-700 text-white transition-colors duration-300 hover:bg-gray-600">
+                <div class="flex items-center mb-4">
+                    <div class="icon bg-blue-500 text-white p-4 rounded-full mr-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-500">Website Design</h4>
+                </div>
+                <p class="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="service-card p-6 rounded-lg shadow-lg bg-gray-700 text-white transition-colors duration-300 hover:bg-gray-600">
+                <div class="flex items-center mb-4">
+                    <div class="icon bg-blue-500 text-white p-4 rounded-full mr-4">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-500">Email Marketing</h4>
+                </div>
+                <p class="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="service-card p-6 rounded-lg shadow-lg bg-gray-700 text-white transition-colors duration-300 hover:bg-gray-600">
+                <div class="flex items-center mb-4">
+                    <div class="icon bg-blue-500 text-white p-4 rounded-full mr-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-500">Backup & Security</h4>
+                </div>
+                <p class="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="service-card p-6 rounded-lg shadow-lg bg-gray-700 text-white transition-colors duration-300 hover:bg-gray-600">
+                <div class="flex items-center mb-4">
+                    <div class="icon bg-blue-500 text-white p-4 rounded-full mr-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-500">IT Consultancy</h4>
+                </div>
+                <p class="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Products Section -->
+<section id="our-products" class="py-16">
+    <div class="container mx-auto px-6">
+        <div class="relative mb-16">
+            <div class="absolute inset-0 flex items-center justify-end pr-8 hidden md:flex">
+                <span class="text-7xl font-bold text-gray-700">Our Products</span>
+            </div>
+            <div class="relative flex items-center mb-8">
+                <div class="bg-purple-100 p-4 rounded mr-4">
+                    <img src="img/Bag_exper.png" alt="Product Icon" class="w-10 h-10">
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold mb-0 text-white">Our Products</h1>
+                    <p class="text-gray-300">What we offer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="service-card relative bg-gray-700 p-4 rounded-lg shadow-none">
+                <img src="img/dl.beatsnoop.com-high-958e7703c1ca3f986d.jpg" alt="Product 1" class="w-full h-55 mb-4 object-cover transition-opacity duration-300">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full mx-2"><i class="fas fa-download"></i></a>
+                    <a href="#" class="bg-green-500 text-white p-2 rounded-full mx-2"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <h2 class="text-xl font-bold mb-1 text-white">Digital Toolbox Directory</h2>
+                <p class="text-gray-300">Purchase and Grab the Offer!</p>
+            </div>
+            <div class="service-card relative bg-gray-700 p-4 rounded-lg shadow-none">
+                <img src="img/IT_tech.jpg" alt="Product 2" class="w-full h-55 mb-4 object-cover transition-opacity duration-300">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full mx-2"><i class="fas fa-download"></i></a>
+                    <a href="#" class="bg-green-500 text-white p-2 rounded-full mx-2"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <h2 class="text-xl font-bold mb-1 text-white">Streaming Services Directory</h2>
+                <p class="text-gray-300">Purchase and Grab the Offer!</p>
+            </div>
+            <div class="service-card relative bg-gray-700 p-4 rounded-lg shadow-none">
+                <img src="img/Grp.jpg" alt="Product 3" class="w-full h-55 mb-4 object-cover transition-opacity duration-300">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full mx-2"><i class="fas fa-download"></i></a>
+                    <a href="#" class="bg-green-500 text-white p-2 rounded-full mx-2"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <h2 class="text-xl font-bold mb-1 text-white">Utility Tools For Computer</h2>
+                <p class="text-gray-300">Purchase and Grab the Offer!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- References Section -->
+   <section class="new-section py-16">
+    <div class="container mx-auto px-6 text-center mb-8">
+        <h2 class="text-3xl font-extrabold mb-2">Our References</h2>
+        <p class="text-gray-600">Check out our previous projects and satisfied clients.</p>
+    </div>
+    <div class="container mx-auto px-6">
+        <div class="card-container">
+            <div class="card">
+                <img src="img/Social.jpg" alt="Design System Basic">
+                <div class="card-content">
+                    <h3 class="card-title">Design System Basic</h3>
+                    <p class="card-author">by Ramon Jeruk Purut</p>
+                </div>
+                <button class="card-button">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/dl.beatsnoop.com-high-958e7703c1ca3f986d.jpg" alt="Fundamental of UI/UX Design">
+                <div class="card-content">
+                    <h3 class="card-title">Fundamental of UI/UX Design</h3>
+                    <p class="card-author">by Wildan Payak</p>
+                </div>
+                <button class="card-button">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/Grp.jpg" alt="How To Be Product Designer">
+                <div class="card-content">
+                    <h3 class="card-title">How To Be Product Designer</h3>
+                    <p class="card-author">by Vicky Gudang Garam</p>
+                </div>
+                <button class="card-button">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact Us Section -->
+        <section id="contact-us" class="contact-us-section mb-16">
+            <h2>Contact Us</h2>
+            <div class="contact-buttons">
+                <a href="https://t.me/YourTelegramUsername" target="_blank">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a href="mailto:youremail@example.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://wa.me/YourWhatsAppNumber" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+      <!-- Footer Section -->
+<footer class="text-white py-10 bg-gradient-to-r from-gray-900 to-black">
+    <div class="container mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start">
+        <!-- Left section -->
+        <div class="mb-8 md:mb-0 flex flex-col items-center md:items-start">
+            <img src="img/Logo_Cms@4x.png" alt="Logo" class="w-32 h-auto mb-4">
+            <p class="mb-4 text-center md:text-left">Join for the latest information</p>
+            <div class="flex flex-col items-center md:items-start">
+                <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded bg-gray-800 text-white mb-2 border-none focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <button class="px-4 py-2 rounded bg-blue-600 text-white">Submit</button>
+            </div>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="mb-8 md:mb-0 flex flex-col items-center md:items-start">
+            <h3 class="mb-4 font-semibold text-center md:text-left">Navigation</h3>
+            <ul class="text-center md:text-left">
+                <li class="mb-2"><a href="#" class="hover:text-blue-600">Home</a></li>
+                <li class="mb-2"><a href="#" class="hover:text-blue-600">About Us</a></li>
+                <li class="mb-2"><a href="#" class="hover:text-blue-600">Services</a></li>
+                <li class="mb-2"><a href="#" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media links -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="mb-4 font-semibold text-center md:text-left">Follow and Subscribe</h3>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-blue-600 flex items-center justify-center w-10 h-10 rounded-full border border-white"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 flex items-center justify-center w-10 h-10 rounded-full border border-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 flex items-center justify-center w-10 h-10 rounded-full border border-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 flex items-center justify-center w-10 h-10 rounded-full border border-white"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Copyright -->
+    <div class="text-center py-4 text-gray-400 border-t border-gray-700 mt-8">
+        <p>&copy; 2024 JG Computing. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="Js/modal.js"></script>
+    <script src="Js/Ref.js"></script>
+    <script src="Js/Scripts.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const languageDropdown = document.getElementById('language-dropdown');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    const selectedFlag = document.getElementById('selected-flag');
+    const languageOptions = document.querySelectorAll('.language-option');
+    const translations = {
+        "en": "translations/translations-en.json",
+        "fr": "translations/translations-fr.json"
+    };
+
+    languageDropdown.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    languageOptions.forEach(option => {
+        option.addEventListener('click', function(event) {
+            event.preventDefault();
+            const flag = this.dataset.flag;
+            const lang = this.dataset.lang;
+            selectedFlag.className = `flag-icon flag-icon-${flag}`;
+            dropdownMenu.classList.add('hidden');
+
+            // Load translations
+            fetch(translations[lang])
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelectorAll('[data-translate]').forEach(element => {
+                        const key = element.dataset.translate;
+                        if (data[key]) {
+                            element.textContent = data[key];
+                        }
+                    });
+                });
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!languageDropdown.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+});
+
+    </script>
+
+</body>
+
+</html>

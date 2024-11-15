@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .product-row .purchase-btn {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .product-row:hover .purchase-btn {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-center">Our Digital Toolbox Directory 📚</h1>
+    <h2 class="text-xl font-semibold mb-4 text-center">Purchase and Grab the Offer!</h2>
+
+    <!-- Table Structure -->
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-white">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="w-1/3 py-2">Category</th>
+                    <th class="w-1/3 py-2">Product</th>
+                    <th class="w-1/3 py-2">Price</th>
+                    <th class="w-1/3 py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Category: Design & Creativity -->
+                <tr class="bg-gray-200">
+                    <td class="py-4 px-6 font-bold" colspan="4">Design & Creativity</td>
+                </tr>
+                <tr class="bg-white product-row">
+                    <td class="py-4 px-6">Design & Creativity</td>
+                    <td class="py-4 px-6">Envato Elements</td>
+                    <td class="py-4 px-6">$19.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <tr class="bg-gray-50 product-row">
+                    <td class="py-4 px-6">Design & Creativity</td>
+                    <td class="py-4 px-6">Canva Pro</td>
+                    <td class="py-4 px-6">$12.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <!-- Add more products in this category -->
+
+                <!-- Category: Image & Video Resources -->
+                <tr class="bg-gray-200">
+                    <td class="py-4 px-6 font-bold" colspan="4">Image & Video Resources</td>
+                </tr>
+                <tr class="bg-white product-row">
+                    <td class="py-4 px-6">Image & Video Resources</td>
+                    <td class="py-4 px-6">G£ttyImages</td>
+                    <td class="py-4 px-6">$29.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <tr class="bg-gray-50 product-row">
+                    <td class="py-4 px-6">Image & Video Resources</td>
+                    <td class="py-4 px-6">iSt0ck Imag£s</td>
+                    <td class="py-4 px-6">$25.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <!-- Add more products in this category -->
+
+                <!-- Category: Content Creation & Writing -->
+                <tr class="bg-gray-200">
+                    <td class="py-4 px-6 font-bold" colspan="4">Content Creation & Writing</td>
+                </tr>
+                <tr class="bg-white product-row">
+                    <td class="py-4 px-6">Content Creation & Writing</td>
+                    <td class="py-4 px-6">ChatGPT Plus</td>
+                    <td class="py-4 px-6">$20.00/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <tr class="bg-gray-50 product-row">
+                    <td class="py-4 px-6">Content Creation & Writing</td>
+                    <td class="py-4 px-6">StoryBase</td>
+                    <td class="py-4 px-6">$14.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <!-- Add more products in this category -->
+
+                <!-- Category: Marketing & SEO -->
+                <tr class="bg-gray-200">
+                    <td class="py-4 px-6 font-bold" colspan="4">Marketing & SEO</td>
+                </tr>
+                <tr class="bg-white product-row">
+                    <td class="py-4 px-6">Marketing & SEO</td>
+                    <td class="py-4 px-6">Nichess</td>
+                    <td class="py-4 px-6">$29.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <tr class="bg-gray-50 product-row">
+                    <td class="py-4 px-6">Marketing & SEO</td>
+                    <td class="py-4 px-6">Depositphoto</td>
+                    <td class="py-4 px-6">$14.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <!-- Add more products in this category -->
+
+                <!-- Category: Online Learning Platforms -->
+                <tr class="bg-gray-200">
+                    <td class="py-4 px-6 font-bold" colspan="4">Online Learning Platforms</td>
+                </tr>
+                <tr class="bg-white product-row">
+                    <td class="py-4 px-6">Online Learning Platforms</td>
+                    <td class="py-4 px-6">Envato Tuts+</td>
+                    <td class="py-4 px-6">$15.00/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <tr class="bg-gray-50 product-row">
+                    <td class="py-4 px-6">Online Learning Platforms</td>
+                    <td class="py-4 px-6">Scribd</td>
+                    <td class="py-4 px-6">$9.99/month</td>
+                    <td class="py-4 px-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition duration-300 purchase-btn">Purchase</button>
+                    </td>
+                </tr>
+                <!-- Add more products in this category -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

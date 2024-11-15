@@ -1,0 +1,88 @@
+
+/* Gradient Button */
+.btn-gradient {
+    background: linear-gradient(90deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa6e7, #7ab0eb, #69b9ed, #52c2e8, #3bc9e2, #23cfda, #00d3d0);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #00d3d0, #23cfda, #3bc9e2, #52c2e8, #69b9ed, #7ab0eb, #8aa6e7, #9a9ae1, #aa8fd8, #ba83ca, #c777b9, #d16ba5);
+}
+
+/* Contact Us Section Styles */
+.contact-us-section {
+    text-align: center;
+    padding: 40px 20px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.contact-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-us-section .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-us-section .contact-buttons a {
+    background: linear-gradient(90deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa6e7, #7ab0eb, #69b9ed, #52c2e8, #3bc9e2, #23cfda, #00d3d0);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.contact-us-section .contact-buttons a:hover {
+    background: linear-gradient(90deg, #00d3d0, #23cfda, #3bc9e2, #52c2e8, #69b9ed, #7ab0eb, #8aa6e7, #9a9ae1, #aa8fd8, #ba83ca, #c777b9, #d16ba5);
+}
+
+.contact-us-section .contact-buttons a i {
+    margin-right: 8px;
+}
+
+.main-content {
+    margin-top: 6rem;
+}
+
+/* Hide scrollbar for all browsers */
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border: none;
+    z-index: 50;
+    height: 80px;
+}
+
+.landing {
+    margin-top: 25px;
+}
+
+/* Additional Footer Styles */
+footer img {
+    width: 150px;
+    height: auto;
+}

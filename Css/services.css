@@ -1,0 +1,56 @@
+
+
+.h1{
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Custom styles if needed */
+.service-card img {
+    border-radius: 24px;
+}
+
+/* Custom CSS for hover effect */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card img {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.service-card:hover img {
+    opacity: 0.3; /* Decrease opacity to make buttons more visible */
+    transform: scale(1.05); /* Slightly scale the image */
+}
+
+.service-card .absolute {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover .absolute {
+    opacity: 1; /* Increase opacity of buttons on hover */
+}
+
+/* Background text styling */
+.relative .absolute {
+    z-index: -1; /* Ensure background text is behind main content */
+}
+
+.relative .relative {
+    z-index: 1; /* Ensure main content is above background text */
+}
+
+.service-card {
+    position: relative;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    overflow: hidden; /* Ensures the absolute position elements don't overflow */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+  

@@ -1,0 +1,161 @@
+/* Promo Modal Styles */
+#promo-modal .modal-content {
+    width: 90%;
+    max-width: 700px;
+    background-color: #030a5c8b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+#promo-modal .modal-content .absolute {
+    position: absolute;
+}
+
+#promo-modal .modal-content .hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #promo-modal .modal-content {
+        flex-direction: column;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    #promo-modal .promo-description {
+        display: none;
+    }
+
+    #promo-modal .promo-image {
+        width: 100%;
+        position: relative;
+    }
+
+    .promo-image img {
+        border-radius: 8px;
+    }
+
+    .promo-image .learn-more-btn {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #close-promo {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.141);
+        padding: 0.5rem;
+        border-radius: 13%;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        border: none;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 769px) {
+    .promo-image .learn-more-btn {
+        display: none;
+    }
+
+    #close-promo {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.053);
+        padding: 0.5rem;
+        border-radius: 13%;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        border: none;
+        z-index: 10;
+    }
+}
+
+/* Prevent scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Styling for promo ad */
+.promo-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.promo-image {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.promo-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.promo-description {
+    flex: 1;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.118); /* Set to 80% opacity */
+}
+
+.btn-primary {
+    background-color: #1A73E8;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #155AB6;
+}
+
+.promo-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.promo-slide.active {
+    display: flex;
+}

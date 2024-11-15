@@ -1,0 +1,13 @@
+
+.custom-gap {
+    gap: 4px;
+}
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 24px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
